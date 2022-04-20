@@ -1,19 +1,22 @@
-function WeatherSlab(props) {
+import React, {useEffect, useState} from 'react';
+
+export default function WeatherSlab(props) {
+
+    const [date, setDate] = useState(new Date());
+    const {location, weather} = props;
 
     return ( 
         <div className="weather-container">
-            <h3>San Francisco, CA</h3>
             <h3>Sunny</h3>
-            <h3>Date</h3>
+            <h3>{location}</h3>
+            <h3>{date.toLocaleString("default", {month:"long", day: "numeric", year: "numeric"})}</h3>
             <div className="weather-temps">
-                <h1>21°</h1>
+                <h1>{weather.temp}°</h1>
                 <div>
-                    <h2>25°</h2>
-                    <h2>18°</h2>
+                    <h2>{weather.high}°</h2>
+                    <h2>{weather.low}°</h2>
                 </div>
             </div>
         </div>
      );
 }
-
-export default WeatherSlab;
