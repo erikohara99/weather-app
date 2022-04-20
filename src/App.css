@@ -1,0 +1,37 @@
+.weather-container {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  margin: 1% 5% 1% 5%;
+}
+
+.weather-container h3 {
+  font-weight: normal;
+  margin: 2px 0 2px 0;
+}
+
+.weather-temps {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.weather-temps > div {
+  border-left: 2px solid white;
+  padding-left: 10px;
+}
+
+.weather-temps h1 {
+  font-size: 60px;
+  line-height: 60px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+.weather-temps h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+}
