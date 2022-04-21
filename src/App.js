@@ -14,14 +14,17 @@ function App() {
       <WeatherSlab 
         location="San Francisco, CA" 
         weather={weather}
+        condition="sunny"
       />
       <WeatherSlab 
         location="New York, NY" 
         weather={weather}
+        condition="cloudy"
       />
       <WeatherSlab 
         location="Chicago, IL" 
         weather={weather}
+        condition="rainy"
       />
     </div>
   );

@@ -1,13 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 export default function WeatherSlab(props) {
 
     const [date, setDate] = useState(new Date());
-    const {location, weather} = props;
+    const {location, weather, condition} = props;
+
+    const styles = "weather-container " + condition;
 
     return ( 
-        <div className="weather-container">
-            <h3>Sunny</h3>
+        <div className={styles}>
+            <h3>{condition}</h3>
             <h3>{location}</h3>
             <h3>{date.toLocaleString("default", {month:"long", day: "numeric", year: "numeric"})}</h3>
             <div className="weather-temps">
