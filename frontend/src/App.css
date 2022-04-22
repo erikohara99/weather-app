@@ -4,6 +4,8 @@
   padding: 20px;
   margin: 15px 5% 15px 5%;
   transition: .25s ease;
+  display: flex;
+  justify-content: space-between;
 }
 
 .weather-container:hover {

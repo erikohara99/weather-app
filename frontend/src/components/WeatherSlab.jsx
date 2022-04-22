@@ -16,16 +16,19 @@ export default function WeatherSlab(props) {
 
     return ( 
         <div className={styles}>
-            <h3>{condition}</h3>
-            <h3>{name} [{zipcode}]</h3>
-            <h3>{date.toLocaleString("default", {month:"long", day: "numeric", year: "numeric"})}</h3>
-            <div className="weather-temps">
-                <h1>{Math.round(main.temp)}°</h1>
-                <div>
-                    <h2>{Math.round(main.temp_max)}°</h2>
-                    <h2>{Math.round(main.temp_min)}°</h2>
+            <div>
+                <h3>{condition}</h3>
+                <h3>{name} [{zipcode}]</h3>
+                <h3>{date.toLocaleString("default", {month:"long", day: "numeric", year: "numeric"})}</h3>
+                <div className="weather-temps">
+                    <h1>{Math.round(main.temp)}°</h1>
+                    <div>
+                        <h2>{Math.round(main.temp_max)}°</h2>
+                        <h2>{Math.round(main.temp_min)}°</h2>
+                    </div>
                 </div>
             </div>
+            <img src={`https://openweathermap.org/img/wn/${icon}@4x.png`}></img>
         </div>
      );
 }
