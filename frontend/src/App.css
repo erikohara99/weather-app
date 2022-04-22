@@ -56,7 +56,12 @@
 }
 
 .snowy {
-  background: linear-gradient(145deg, #ffffff 0%, #e3e3e3 58%);
+  background: linear-gradient(145deg, #e6e6e6 0%, #e3e3e3 58%);
+  color: #353535;
+}
+
+.weather-container.snowy .weather-temps > div {
+  border-left: 2px solid #353535;
 }
 
 .haze {
