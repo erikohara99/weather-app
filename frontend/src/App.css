@@ -54,3 +54,11 @@
 .rainy {
   background: linear-gradient(145deg, #464646 0%, #0a4d61 50%, #284650 93%);
 }
+
+.snowy {
+  background: linear-gradient(145deg, #ffffff 0%, #e3e3e3 58%);
+}
+
+.haze {
+  background: linear-gradient(0deg, #a4a4a4 0%, #e3e3e3 11%, #a4a4a4 42%, #e3e3e3 79%, #a4a4a4 100%);
+}
