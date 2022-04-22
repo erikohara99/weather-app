@@ -1,6 +1,7 @@
 const app = require("express")();
 const axios = require("axios");
 const cors = require("cors");
+const _ = require("lodash");
 
 app.use(cors());
 
@@ -13,8 +14,11 @@ app.get("/api/weather", async (req, res) => {
 
     // Get weather of town from coordinates
     query = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.data.lat}&lon=${coords.data.lon}&units=imperial&appid=${process.env.openweathermap_ApiKey}`;
-    let weather = await axios.get(query);
-    res.send(weather.data);
+    let {data} = await axios.get(query);
+
+    // Select only needed data
+    const weather = _.pick(data, ["main", "name", "sys", "weather", "wind"]);
+    res.send(weather);
 });
 
 app.listen(3000, () => {console.log("Server is listening on port 3000...")});
