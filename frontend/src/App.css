@@ -21,25 +21,47 @@
   text-transform: capitalize;
 }
 
-.weather-temps {
-  display: flex;
-  align-items: center;
+.weather {
   margin-top: 40px;
 }
 
-.weather-temps > div {
+.weather, .wind {
+  display: flex;
+  align-items: center;
+}
+
+.wind {
+  margin-left: 50px;
+}
+
+.wind h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.wind img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+.temps {
+  display: flex;
+  align-items: center;
+}
+
+.temps > div {
   border-left: 2px solid white;
   padding-left: 10px;
 }
 
-.weather-temps h1 {
+.temps h1 {
   font-size: 60px;
   line-height: 60px;
   padding-right: 10px;
   margin: 0;
 }
 
-.weather-temps h2 {
+.temps h2 {
   font-size: 25px;
   line-height: 25px;
   margin: 0;
@@ -62,8 +84,12 @@
   color: #353535;
 }
 
-.weather-container.snowy .weather-temps > div {
+.weather-container.snowy .temps > div {
   border-left: 2px solid #353535;
+}
+
+.weather-container.snowy .wind img {
+  filter: brightness(25%);
 }
 
 .haze {
