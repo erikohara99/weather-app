@@ -11,7 +11,6 @@ app.get("/api/weather", async (req, res) => {
     const {zipcode} = req.query;
     let query = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode},US&appid=${process.env.openweathermap_ApiKey}`;
     let coords = await axios.get(query);
-    console.log(coords);
 
     // Get weather of town from coordinates
     query = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.data.lat}&lon=${coords.data.lon}&units=imperial&appid=${process.env.openweathermap_ApiKey}`;
@@ -20,6 +19,8 @@ app.get("/api/weather", async (req, res) => {
     // Select only needed data
     const weather = _.pick(data, ["main", "name", "sys", "weather", "wind"]);
     weather.zipcode = zipcode;
+    weather.sys.sunrise = new Date(weather.sys.sunrise * 1000).toLocaleTimeString("en-US", {hour: "numeric", minute: "numeric"});
+    weather.sys.sunset = new Date(weather.sys.sunset * 1000).toLocaleTimeString("en-US", {hour: "numeric", minute: "numeric"});
     res.send(weather);
 });
 

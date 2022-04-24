@@ -25,13 +25,21 @@
   margin-top: 40px;
 }
 
+.weather > div:not(:first-child) {
+  margin-left: 50px;
+}
+
 .weather, .wind {
   display: flex;
   align-items: center;
 }
 
-.wind {
-  margin-left: 50px;
+#sunrise::before {
+  content: "🌕";
+}
+
+#sunset::before {
+  content: "🌑";
 }
 
 .wind h1 {
@@ -61,7 +69,7 @@
   margin: 0;
 }
 
-.temps h2 {
+.temps h2, .daytimes h1 {
   font-size: 25px;
   line-height: 25px;
   margin: 0;

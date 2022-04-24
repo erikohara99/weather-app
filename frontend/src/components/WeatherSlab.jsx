@@ -32,6 +32,11 @@ export default function WeatherSlab(props) {
                         </div>
                     </div>
 
+                    <div className="daytimes">
+                        <h1 id="sunrise">{sys.sunrise}*</h1>
+                        <h1 id="sunset">{sys.sunset}*</h1>
+                    </div>
+
                     <div className="wind">
                         <h1>{wind.speed.toPrecision(2)} mph</h1>
                         <img style={styles_wind} src={Arrow}></img>
