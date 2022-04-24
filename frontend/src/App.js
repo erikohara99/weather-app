@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import WeatherSlab from "./components/WeatherSlab";
+import Header from './components/Header';
 const axios = require("axios");
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <SearchBar onSubmit={handleSubmit}/>
 
-      {cities.length == 0 ? "Add some cities to see their weather!" : cities.map(weather => {
+      {cities.length == 0 ? <h4>Add some cities to see their weather!</h4> : cities.map(weather => {
         return <WeatherSlab weather={weather} />;
       })}
       
