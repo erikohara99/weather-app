@@ -1,3 +1,43 @@
+.App h5 {
+  text-align: center;
+}
+
+#searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+#searchbar form input, #searchbar form button {
+  box-sizing: border-box;
+  padding: 0;
+  height: 50px;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+#searchbar form input {
+  width: 300px;
+  border-radius: 10px 0 0 10px;
+  border-right: 0px;
+  padding-left: 20px;
+}
+
+#searchbar form input:focus {
+  outline: none;
+}
+
+#searchbar form button {
+  width: 100px;
+  border-radius: 0 10px 10px 0;
+  border-left: 0px;
+  transition: 0.1s ease;
+}
+
+#searchbar form button:hover {
+  cursor: pointer;
+  background-color: rgb(209, 209, 209);
+}
+
 .weather-container {
   border-radius: 15px;
   color: white;
