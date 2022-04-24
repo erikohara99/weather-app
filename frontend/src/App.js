@@ -21,6 +21,7 @@ function App() {
       {cities.length == 0 ? "Add some cities to see their weather!" : cities.map(weather => {
         return <WeatherSlab weather={weather} />;
       })}
+      <h5>*All times are local to the current machine.</h5>
     </div>
   );
 }
