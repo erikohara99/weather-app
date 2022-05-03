@@ -5,7 +5,7 @@ function SearchBar(props) {
         <div id="searchbar">
             <form onSubmit={props.onSubmit}>
                 <input id="zipsearch" placeholder="Enter Zip Code"></input>
-                <button type="submit">Submit</button>
+                <button type="submit">Search</button>
             </form>
         </div>
      );

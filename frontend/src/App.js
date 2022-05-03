@@ -18,10 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <SearchBar onSubmit={handleSubmit}/>
+      <Header onSubmit={handleSubmit} />
 
-      {cities.length == 0 ? <h4>Add some cities to see their weather!</h4> : cities.map(weather => {
+      {cities.length === 0 ? <h4>Add some cities to see their weather!</h4> : cities.map(weather => {
         return <WeatherSlab weather={weather} />;
       })}
       

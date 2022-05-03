@@ -1,3 +1,8 @@
+body {
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+}
+
 .App h5, .App h4 {
   text-align: center;
 }
@@ -7,7 +12,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: grey;
+  color: whitesmoke;
 }
 
 #links a:not(:first-child) {
@@ -32,6 +37,7 @@
   border-radius: 10px 0 0 10px;
   border-right: 0px;
   padding-left: 20px;
+  flex-shrink: 2;
 }
 
 #searchbar form input:focus {
