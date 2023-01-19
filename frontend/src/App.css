@@ -37,7 +37,6 @@ body {
   border-radius: 10px 0 0 10px;
   border-right: 0px;
   padding-left: 20px;
-  flex-shrink: 2;
 }
 
 #searchbar form input:focus {
